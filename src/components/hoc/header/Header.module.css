@@ -1,0 +1,26 @@
+.header {
+    height: 100px;
+    background-color: #3F3F3F;
+    display: flex;
+    align-items: center;
+    color: #969696;
+    font-size: 25px;
+    font-weight: bold;
+    box-shadow: 0 2px 10px black;
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;
+}
+
+.linksContainer {
+    display: flex;
+}
+
+.linksParagraph {
+    margin-left: 8px;
+    margin-right: 8px;
+}
