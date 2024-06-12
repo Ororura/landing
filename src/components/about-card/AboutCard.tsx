@@ -1,3 +1,4 @@
+import { AgeSVG, MaleSVG, PlanetSVG } from "@/assets";
 import Image from "next/image";
 import { FC } from "react";
 
@@ -10,21 +11,21 @@ const AboutCard: FC = () => {
       <div className={styles.infoWrapper}>
         <div className={styles.infoCard}>
           <div className={styles.cardIcon}>
-            <Image src={"/EarthPlanet.svg"} alt={"earth"} width={27} height={27} />
+            <PlanetSVG />
             <p className={styles.cardParagraph}>Born in:</p>
           </div>
           <p>Russia</p>
         </div>
         <div className={styles.infoCard}>
           <div className={styles.cardIcon}>
-            <Image src={"/CompareHeights.svg"} alt={"CompareHeights"} width={27} height={27} />
+            <AgeSVG />
             <p className={styles.cardParagraph}>Age:</p>
           </div>
           <p>19</p>
         </div>
         <div className={styles.infoCard}>
           <div className={styles.cardIcon}>
-            <Image src={"/Male.svg"} alt={"male"} width={27} height={27} />
+            <MaleSVG />
             <p className={styles.cardParagraph}>Gender:</p>
           </div>
           <p>Male</p>
