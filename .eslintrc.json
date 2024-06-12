@@ -6,7 +6,8 @@
     "plugin:@typescript-eslint/recommended"
   ],
   "plugins": [
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "jsx-a11y"  // Добавлен плагин для проверок доступности
   ],
   "parser": "@typescript-eslint/parser",
   "rules": {
@@ -21,7 +22,7 @@
       }
     ],
     "import/order": [
-      "error",
+      "warn",
       {
         "groups": [
           "builtin",
@@ -34,9 +35,25 @@
             "group": "external",
             "position": "before"
           }
-        ],
-        "newlines-between": "always"
+        ]
       }
-    ]
+    ],
+    // Accessibility rules
+    "jsx-a11y/alt-text": "warn",  // Проверка наличия alt текста у изображений
+    "jsx-a11y/anchor-has-content": "warn",  // Проверка наличия содержимого у ссылок
+    "jsx-a11y/aria-role": "warn",  // Проверка корректности роли aria
+    "jsx-a11y/aria-props": "warn",  // Проверка корректности свойств aria
+    "jsx-a11y/label-has-associated-control": "warn",  // Проверка наличия связанных контролов у меток
+
+    // Best practices
+    "eqeqeq": ["error", "always"],  // Требовать использования === и !== вместо == и !=
+    "curly": ["error", "all"],  // Требовать использования фигурных скобок для всех управляющих блоков
+    "no-unused-vars": "warn",  // Предупреждение о неиспользуемых переменных
+    "no-console": ["warn", { "allow": ["warn", "error"] }],  // Запрет использования console, кроме warn и error
+
+    // TypeScript specific rules
+    "@typescript-eslint/no-unused-vars": ["warn"],  // Предупреждение о неиспользуемых переменных в TypeScript
+    "@typescript-eslint/explicit-function-return-type": ["warn"],  // Требовать явного указания типа возвращаемого значения для функций
+    "@typescript-eslint/no-explicit-any": "warn"  // Предупреждение о использовании типа any
   }
 }
