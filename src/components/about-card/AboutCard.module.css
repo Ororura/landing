@@ -11,6 +11,7 @@
     margin: 10px auto auto;
     display: flex;
     object-fit: cover;
+    box-shadow: 0 1px 8px #464040;
 }
 
 .infoWrapper {
